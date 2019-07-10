@@ -1,0 +1,154 @@
+// body {
+//     background-color: #2f3542;
+//     font-family: Helvetica, Arial, sans-serif;
+//     margin-top: 150px;
+// }
+
+// #playground {
+//     display: none;
+// }
+// .container {
+//     display: flex;
+// }
+
+// .title {
+//     text-align: center;
+
+//     h2 {
+//         color: greenyellow;
+//     }
+
+//     h3 {
+//         color: royalblue;
+//     }
+// }
+
+// .box {
+//     text-align: center;
+//     padding: 10px;
+//     font-size: 18px;
+//     margin-top: 35px;
+//     border: 4px solid goldenrod;
+//     justify-content: center;
+//     justify-content: space-between;
+// }
+
+// /* colors box */
+// .box-1 {
+//     background: #f7f5f5;
+// }
+
+// .box-2 {
+//     background: #e4e3e0;
+// }
+
+
+// .buttons {
+//     color: goldenrod;
+// }
+
+// img {
+//     text-align: center;
+//     display: inline;
+// }
+
+
+// button {
+//     padding: 18px 30px;
+//     font-size: 14px;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     background: #eccc68;
+// }
+
+// .new-game {
+//     display: block;
+//     width: 150px;
+//     margin: 0 auto 20px;
+//     font-weight: bold;
+// }
+
+// .paper {
+//     background-color: #337ab7;
+// }
+
+// .stone {
+//     background-color: #5cb85c;
+// }
+
+// .scissors {
+//     background-color: #d9534f
+// }
+
+// #result {
+//     text-align: center;
+//     font-size: 14px;
+//     color: #1e90ff;
+// }
+
+// .text-center {
+//     text-align: center;
+//     font-size: 14px;
+//     color: #1e90ff;
+// }
+
+// /* modal */
+
+// .overlay {
+// 	display: none;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: rgba(0, 0, 0, 0.7);
+	
+// 	&.show {
+// 		display: block;
+// 	}
+// }
+
+// .modal {
+// 	display: none;
+// 	background: #fff;
+// 	width: 800px;
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate3d(-50%, -50%, 0);
+
+// 	&.show {
+// 		display: block;
+// 	}
+// 	// wewnatrz modala : 
+// 	.close {
+// 		position: absolute;
+// 		right: 0;
+// 		top: 0;
+// 		padding: 5px;
+// 		color: rgb(0, 0, 0);
+// 		text-decoration: none;
+// 	}
+	
+// 	h1 {
+// 		font-size: 22px;
+// 		line-height: 30px;
+// 		min-height: 30px;
+// 		font-weight: bold;
+//         padding: 0 30px;
+//         color: rgb(43, 37, 37);
+//         text-align: center;
+//         padding-top: 12px;
+// 	}
+
+// th {
+//     font-size: 14px;
+//     border: 1px solid rgb(184, 183, 183);
+//     width: 10%;
+// }
+// }
+
+// h2 {
+//     color: white;
+//     text-align: center;
+// }
