@@ -1,6 +1,7 @@
 var output = document.getElementById('output');
 var score = document.getElementById('score');
 var result = document.getElementById('result');
+var modalOne = document.getElementById('modal-one');
 var options = ['papier', 'kamien', 'nozyce'];
 var params = {
   rounds: "",
@@ -58,6 +59,7 @@ document.querySelector('.new-game').addEventListener('click', function () {
     result.innerHTML = params.playerScore + ' - ' + params.computerScore;
     output.innerHTML = '';
     score.innerHTML = '';
+    modalOne.innerHTML= '';
     document.querySelector('.rounds').innerHTML = params.rounds + '<br>Winnings, its your victory.';
     activeButtons();
   }
@@ -81,10 +83,10 @@ for (var i = 0; i < test.length; i++) {
     result.innerHTML = params.playerScore + ' - ' + params.computerScore;
 
     if (params.rounds == params.playerScore) {
-      score.innerHTML = 'You won the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
+      score.modalOne = 'You won the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     } else if (params.rounds == params.computerScore) {
-      score.innerHTML = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
+      score.modalOne = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     }
   });

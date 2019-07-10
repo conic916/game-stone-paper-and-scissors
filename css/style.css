@@ -1,7 +1,7 @@
 body {
-  background-color: #1e1e1f;
+  background-color: #a7a3a3;
   font-family: Helvetica, Arial, sans-serif;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 #playground {
@@ -9,9 +9,47 @@ body {
 }
 
 .container {
-  width: 1100px;
-  background-color: #dddddd;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%236f6f6f' fill-opacity='0.21'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #ee1fdd;
+  background-color: #eceeec;
+  min-height: 80vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-img {
+  width: 700px;
+  margin-left: 150px;
+  padding-top: 15px;
+}
+
+.container-game {
+  border: 1px solid #f031e6;
+  width: 500px;
+  height: 300px;
+}
+
+.container-game h3 {
+  color: #e211bf;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container-game p {
+  color: #c98e22;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container-result {
+  border: 1px solid #ff00ea;
+  width: 500px;
+  height: 300px;
 }
 
 .title {
@@ -32,7 +70,6 @@ body {
 }
 
 button {
-  padding: 18px 30px;
   font-size: 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -40,34 +77,35 @@ button {
 }
 
 .new-game {
-  display: block;
+  margin-top: 120px;
   width: 150px;
-  margin: 40px auto 80px;
+  height: 60px;
   font-weight: bold;
 }
 
 .paper {
-  background-color: #337ab7;
+  background-color: #76dcf5;
 }
 
 .stone {
-  background-color: #5cb85c;
+  background-color: #75f156;
 }
 
 .scissors {
-  background-color: #d9534f;
+  background-color: #e61733;
 }
 
 #result {
   text-align: center;
-  font-size: 18px;
-  color: #131414;
+  font-size: 32px;
+  font-weight: 600;
+  color: #0e0c0c;
 }
 
 .text-center {
   text-align: center;
-  font-size: 14px;
-  color: #151616;
+  font-size: 18px;
+  color: #0f0f0f;
 }
 
 /* modal */
@@ -125,8 +163,20 @@ button {
   width: 10%;
 }
 
-h2 {
-  color: #171816;
+h3 {
   text-align: center;
+  padding-top: 50px;
+}
+
+h3 a {
+  color: #fd0808;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h3 li {
+  font-size: 18px;
+  padding-top: 10px;
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */

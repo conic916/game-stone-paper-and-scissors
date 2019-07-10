@@ -15,48 +15,41 @@
         <h3>Play with me :</h3>
     </div>
     <div class="container">
-        <div class="buttons">
-            <button class="btn paper player-move" data-move="papier"><img src="image/papier.jpg" alt="papier"></button>
-            <button class="btn stone player-move" data-move="kamien"><img src="image/kamien.jpg" alt="kamien"></button>
-            <button class="btn scissors player-move" data-move="nozyce"><img src="image/nozyczki.jpg" alt="nozyczki"></button>
+        <div class="container-img">
+            <div class="buttons">
+                <button class="btn paper player-move" data-move="papier"><img src="image/papier.jpg"
+                        alt="papier"></button>
+                <button class="btn stone player-move" data-move="kamien"><img src="image/kamien.jpg"
+                        alt="kamien"></button>
+                <button class="btn scissors player-move" data-move="nozyce"><img src="image/nozyczki.jpg"
+                        alt="nozyczki"></button>
+            </div>
         </div>
         <button class="new-game">New Game</button>
-        <p class="text-center">Score </p>
-        <p>Computer - Player</p>
-        <p class="text-center rounds"></p>
-        <div id="result"></div>
-        <div id="output"></div>
-        <div id="score"></div>
-
-
-        <h2>Wyniki gry :</h2>
-        <h4><a href="#modal-one" class="show-modal">Kto wygral w tej walce? sprawdz</a></h4>
-        <h4><a href="#modal-two" class="show-modal"> sprawdz wyniki gry:</a></h4>
-        <h4><a href="#modal-three" class="show-modal">new game - new promt:</a></h4>
-
-        <div class="overlay" id="modal-overlay">
-            <div class="modal" id="modal-one">
-                <a href="#" class="close">x</a>
-                <header>wyniki gry:</header>
-                <div class="content">
-                    <h3>computer or player: </h3>
+        <div class="container-game">
+            <h3>Computer - Player :</h3>
+            <p class="text-center rounds"></p>
+            <p class="text-center">SCORE :</p>
+            <div id="output"></div>
+            <div id="score"></div>
+            <div id="result"></div>
+        </div>
+        <div class="container-result">
+            <h3><a href="#modal-one" class="show-modal">Results of the game: </a>
+                <ul>
+                    <li>who won</li>
+                    <li>who lost</li>
+                    <li>scoreboard</li>
+                </ul>
+            </h3>
+            <div class="overlay" id="modal-overlay">
+                <div class="modal" id="modal-one">
+                    <a href="#" class="close">x</a>
+                    <div class="content">
+                        <h3>results game: </h3>
+                    </div>
                 </div>
             </div>
-            <div class="modal" id="modal-two">
-                <a href="#" class="close">x</a>
-                <header>wyniki gry: </header>
-                <div class="content">
-                    <h3> stworzyc tabele!!!!!!! </h3>
-                </div>
-            </div>
-            <div class="modal" id="modal-three">
-                <a href="#" class="close">x</a>
-                <header>ile razy chcesz zagrac? wpisz liczbe</header>
-                <div class="content">
-                    <h3></h3>
-                </div>
-            </div>
-
             <script src="js/index.js"></script>
 </body>
 
