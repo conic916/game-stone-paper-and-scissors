@@ -93,45 +93,45 @@ for (var i = 0; i < test.length; i++) {
 }
 
 
-(function(){ 
-  //zmienna dla wszystkich otwartych modali  : 
-  var modalLinks = document.querySelectorAll(".show-modal");
-  //zmienna dla zamykanie modala 
-  var modalOverlay = document.querySelector("#modal-overlay");
-  // zmienna dla przerwania propoagacji :
-  var modals = document.querySelectorAll(".modal");
-  // zamykanie modala poprzez kliknięcie w overlay  
-  var closeButtons = document.querySelectorAll(".modal .close");
-  
-   // usuwanie klasy show  i dodanie overlay
-  var showModal = function(event) {
-      event.preventDefault();
-      modalOverlay.classList.add("show");
-      for (var i = 0; i < modals.length; i++) {
-        modals[i].classList.remove("show");
-      }
-      document.querySelector(this.getAttribute("href")).classList.add('show');
-    };
-    
-  // dodanie do wszystkich modali 
-      for (var i = 0; i < modalLinks.length; i++) {
-          modalLinks[i].addEventListener("click", showModal);
-    }
-    
-  var hideModal = function(event) {
-      event.preventDefault();
-      modalOverlay.classList.remove("show");
-    };
-  
-      for (var i = 0; i < closeButtons.length; i++) {
-          closeButtons[i].addEventListener("click", hideModal);
-    }
-          modalOverlay.addEventListener("click", hideModal);
-    
-  // przerwanie propagacji 
-      for (var i = 0; i < modals.length; i++) {
-          modals[i].addEventListener("click", function(event) {
-          event.stopPropagation();
-      });
-    }
-  })();
+(function () {
+
+  // Otwieranie modala:
+
+  var showModal = function (event) {
+    event.preventDefault();
+    document.querySelector('#modal-overlay').classList.add('show');
+  };
+
+  // dla wielu modali : 
+
+  var modalLinks = document.querySelectorAll('.show-modal');
+  for (var i = 0; i < modalLinks.length; i++) {
+    modalLinks[i].addEventListener('click', showModal);
+  }
+
+  // zamykamy modal 
+  var hideModal = function (event) {
+    event.preventDefault();
+    document.querySelector('#modal-overlay').classList.remove('show');
+  };
+
+  var closeButtons = document.querySelectorAll('.modal .close');
+
+  for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].addEventListener('click', hideModal);
+  }
+
+  // zamykanie poprzez klikniecie w overlay  	
+  document.querySelector('#modal-overlay').addEventListener('click', hideModal);
+
+  // blokowanie propagacji na klikniecie jakiekolwiek
+
+  var modals = document.querySelectorAll('.modal');
+
+  for (var i = 0; i < modals.length; i++) {
+    modals[i].addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  }
+
+})();
