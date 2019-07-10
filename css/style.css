@@ -1,5 +1,5 @@
 body {
-  background-color: #a7a3a3;
+  background-color: #333232;
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 70px;
 }
@@ -12,8 +12,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   border: 2px solid #ee1fdd;
-  background-color: #eceeec;
-  min-height: 80vh;
+  background-color: #11416d;
+  min-height: 70vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -28,6 +28,7 @@ body {
   border: 1px solid #f031e6;
   width: 500px;
   height: 300px;
+  margin-left: 50px;
 }
 
 .container-game h3 {
@@ -39,7 +40,7 @@ body {
 }
 
 .container-game p {
-  color: #c98e22;
+  color: rgba(190, 243, 91, 0.938);
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -58,10 +59,12 @@ body {
 
 .title h2 {
   color: greenyellow;
+  padding-bottom: 20px;
 }
 
 .title h3 {
   color: #57d7db;
+  padding-bottom: 20px;
 }
 
 .buttons {
@@ -99,13 +102,25 @@ button {
   text-align: center;
   font-size: 32px;
   font-weight: 600;
-  color: #0e0c0c;
+  color: #e988d9;
 }
 
 .text-center {
   text-align: center;
   font-size: 18px;
-  color: #0f0f0f;
+  color: #f70e0e;
+}
+
+#output {
+  font-size: 18px;
+  text-align: center;
+  color: #ff8800;
+}
+
+#score {
+  text-align: center;
+  color: #efff15;
+  font-size: 22px;
 }
 
 /* modal */
@@ -163,20 +178,25 @@ button {
   width: 10%;
 }
 
-h3 {
+h2 {
   text-align: center;
   padding-top: 50px;
 }
 
-h3 a {
-  color: #fd0808;
+h2 a {
+  color: #b8f52a;
   font-size: 22px;
   font-weight: 700;
 }
 
-h3 li {
+h2 a:hover {
+  color: #fcfafa;
+}
+
+h2 li {
   font-size: 18px;
   padding-top: 10px;
   list-style-type: none;
+  color: #fac209;
 }
 /*# sourceMappingURL=style.css.map */
