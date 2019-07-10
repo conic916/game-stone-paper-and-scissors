@@ -1,154 +1,132 @@
-// body {
-//     background-color: #2f3542;
-//     font-family: Helvetica, Arial, sans-serif;
-//     margin-top: 150px;
-// }
+body {
+    background-color: #1e1e1f;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 60px;
+}
 
-// #playground {
-//     display: none;
-// }
-// .container {
-//     display: flex;
-// }
+#playground {
+    display: none;
+}
+.container {
+    width: 1100px;
+    background-color: #dddddd;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%236f6f6f' fill-opacity='0.21'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+}
 
-// .title {
-//     text-align: center;
+.title {
+    text-align: center;
 
-//     h2 {
-//         color: greenyellow;
-//     }
+    h2 {
+        color: greenyellow;
+    }
 
-//     h3 {
-//         color: royalblue;
-//     }
-// }
+    h3 {
+        color: rgb(87, 215, 219);
+    }
+}
 
-// .box {
-//     text-align: center;
-//     padding: 10px;
-//     font-size: 18px;
-//     margin-top: 35px;
-//     border: 4px solid goldenrod;
-//     justify-content: center;
-//     justify-content: space-between;
-// }
-
-// /* colors box */
-// .box-1 {
-//     background: #f7f5f5;
-// }
-
-// .box-2 {
-//     background: #e4e3e0;
-// }
+.buttons {
+ text-align: center;
+ padding-top: 25px;
+}
 
 
-// .buttons {
-//     color: goldenrod;
-// }
+button {
+    padding: 18px 30px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #face4b;
+}
 
-// img {
-//     text-align: center;
-//     display: inline;
-// }
+.new-game {
+    display: block;
+    width: 150px;
+    margin: 40px auto 80px;
+    font-weight: bold;
+}
 
+.paper {
+    background-color: #337ab7;
+}
 
-// button {
-//     padding: 18px 30px;
-//     font-size: 14px;
-//     border-radius: 4px;
-//     cursor: pointer;
-//     background: #eccc68;
-// }
+.stone {
+    background-color: #5cb85c;
+}
 
-// .new-game {
-//     display: block;
-//     width: 150px;
-//     margin: 0 auto 20px;
-//     font-weight: bold;
-// }
+.scissors {
+    background-color: #d9534f
+}
 
-// .paper {
-//     background-color: #337ab7;
-// }
+#result {
+    text-align: center;
+    font-size: 18px;
+    color: #131414;
+}
 
-// .stone {
-//     background-color: #5cb85c;
-// }
+.text-center {
+    text-align: center;
+    font-size: 14px;
+    color: #151616;
+}
 
-// .scissors {
-//     background-color: #d9534f
-// }
+/* modal */
 
-// #result {
-//     text-align: center;
-//     font-size: 14px;
-//     color: #1e90ff;
-// }
-
-// .text-center {
-//     text-align: center;
-//     font-size: 14px;
-//     color: #1e90ff;
-// }
-
-// /* modal */
-
-// .overlay {
-// 	display: none;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: rgba(0, 0, 0, 0.7);
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
 	
-// 	&.show {
-// 		display: block;
-// 	}
-// }
+	&.show {
+		display: block;
+	}
+}
 
-// .modal {
-// 	display: none;
-// 	background: #fff;
-// 	width: 800px;
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate3d(-50%, -50%, 0);
+.modal {
+	display: none;
+	background: #fff;
+	width: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
 
-// 	&.show {
-// 		display: block;
-// 	}
-// 	// wewnatrz modala : 
-// 	.close {
-// 		position: absolute;
-// 		right: 0;
-// 		top: 0;
-// 		padding: 5px;
-// 		color: rgb(0, 0, 0);
-// 		text-decoration: none;
-// 	}
+	&.show {
+		display: block;
+	}
+	// wewnatrz modala : 
+	.close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 5px;
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
 	
-// 	h1 {
-// 		font-size: 22px;
-// 		line-height: 30px;
-// 		min-height: 30px;
-// 		font-weight: bold;
-//         padding: 0 30px;
-//         color: rgb(43, 37, 37);
-//         text-align: center;
-//         padding-top: 12px;
-// 	}
+	h1 {
+		font-size: 22px;
+		line-height: 30px;
+		min-height: 30px;
+		font-weight: bold;
+        padding: 0 30px;
+        color: rgb(43, 37, 37);
+        text-align: center;
+        padding-top: 12px;
+	}
 
-// th {
-//     font-size: 14px;
-//     border: 1px solid rgb(184, 183, 183);
-//     width: 10%;
-// }
-// }
+th {
+    font-size: 14px;
+    border: 1px solid rgb(184, 183, 183);
+    width: 10%;
+}
+}
 
-// h2 {
-//     color: white;
-//     text-align: center;
-// }
+h2 {
+    color: rgb(23, 24, 22);
+    text-align: center;
+}
