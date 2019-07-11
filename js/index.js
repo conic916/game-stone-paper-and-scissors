@@ -1,14 +1,19 @@
-var output = document.getElementById('output');
-var score = document.getElementById('score');
-var result = document.getElementById('result');
-var modalOne = document.getElementById('modal-one');
-var options = ['papier', 'kamien', 'nozyce'];
+'use strict';
+
 var params = {
   rounds: "",
   playerScore: 0,
   computerScore: 0,
-  // progress: []
+  progress: [],
+  resultInfo: ""
 }
+
+var output = document.getElementById('output');
+var score = document.getElementById('score');
+var result = document.getElementById('result');
+var modalOutput = document.querySelector('.modal-output');
+var options = ['papier', 'kamien', 'nozyce'];
+
 
 // losowanie liczby od 1-3 i zwracanie nazwy ruchu komputera
 function computerMoveName() {
@@ -35,13 +40,13 @@ function playerMove(playerMove, computerMove) {
 // funkcja blokujaca buttony i aktywujace po skonczonej grze
 function activeButtons() {
   for (var i = 0; i <= 2; i++) {
-    document.getElementsByClassName("btn")[i].disabled = false; 
+    document.getElementsByClassName("btn")[i].disabled = false;
   }
 }
 
 function disableButtons() {
   for (var i = 0; i <= 2; i++) {
-    document.getElementsByClassName("btn")[i].disabled = true; 
+    document.getElementsByClassName("btn")[i].disabled = true;
   }
 }
 
@@ -59,16 +64,14 @@ document.querySelector('.new-game').addEventListener('click', function () {
     result.innerHTML = params.playerScore + ' - ' + params.computerScore;
     output.innerHTML = '';
     score.innerHTML = '';
-    modalOne.innerHTML= '';
     document.querySelector('.rounds').innerHTML = params.rounds + '<br>Winnings, its your victory.';
     activeButtons();
   }
-}
-);
+});
 
 // wyświetlanie tekstu o ruchu gracza i komputera
 function printMoves(playerM, computerMove) {
-  output.innerHTML = 'Player: ' + playerM + '<br>' + 'Computer: ' +'<span class="computer-move">' +  computerMove + '</span>';
+  output.innerHTML = 'Player: ' + playerM + '<br>' + 'Computer: ' + '<span class="computer-move">' + computerMove + '</span>';
 }
 
 var test = document.getElementsByClassName("player-move"); // new class
@@ -83,18 +86,18 @@ for (var i = 0; i < test.length; i++) {
     result.innerHTML = params.playerScore + ' - ' + params.computerScore;
 
     if (params.rounds == params.playerScore) {
-      score.modalOne = 'You won the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
+      modalOutput.innerHTML = 'You won the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     } else if (params.rounds == params.computerScore) {
-      score.modalOne = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
+      modalOutput.innerHTML = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     }
+    showModal('.modalOutput');
+    params.winningsInfo = '';
   });
 }
 
-
 (function () {
-
   // Otwieranie modala:
 
   var showModal = function (event) {
@@ -115,7 +118,7 @@ for (var i = 0; i < test.length; i++) {
     document.querySelector('#modal-overlay').classList.remove('show');
   };
 
-  var closeButtons = document.querySelectorAll('.modal .close');
+  var closeButtons = document.querySelectorAll('.modal .close .modal-output');
 
   for (var i = 0; i < closeButtons.length; i++) {
     closeButtons[i].addEventListener('click', hideModal);
@@ -126,7 +129,7 @@ for (var i = 0; i < test.length; i++) {
 
   // blokowanie propagacji na klikniecie jakiekolwiek
 
-  var modals = document.querySelectorAll('.modal');
+  var modals = document.querySelectorAll('.modal .modal-output');
 
   for (var i = 0; i < modals.length; i++) {
     modals[i].addEventListener('click', function (event) {

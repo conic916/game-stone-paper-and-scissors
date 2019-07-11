@@ -135,17 +135,17 @@ button {
   display: block;
 }
 
-.modal {
-  background: #eec0e8;
+.modal-output {
+  background: #8fb3dd;
   width: 500px;
-  height: 200px;
+  height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
 
-.modal .close {
+.modal-output .close {
   position: absolute;
   right: 0;
   top: 0;
@@ -154,7 +154,7 @@ button {
   text-decoration: none;
 }
 
-.modal header {
+.modal-output header {
   font-size: 20px;
   line-height: 30px;
   min-height: 30px;
@@ -162,7 +162,7 @@ button {
   padding: 0 30px;
 }
 
-.modal .content {
+.modal-output .content {
   color: #082536;
   min-height: 30px;
   padding: 5px 30px;
