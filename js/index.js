@@ -5,7 +5,7 @@ var params = {
   playerScore: 0,
   computerScore: 0,
   progress: [],
-  resultInfo: ""
+  resultInfo: "",
 }
 
 var output = document.getElementById('output');
@@ -54,7 +54,7 @@ function disableButtons() {
 document.querySelector('.new-game').addEventListener('click', function () {
   params.rounds = prompt('Write the number of won rounds, which ends the game:');
   params.rounds = params.rounds.trim();
-  // params.progress = [];
+  params.progress = [];
   if (isNaN(params.rounds) || params.rounds == '0' || params.rounds == "") {
     alert('The correct number has not been entered.');
   } else {
@@ -92,8 +92,7 @@ for (var i = 0; i < test.length; i++) {
       modalOutput.innerHTML = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     }
-    showModal('.modalOutput');
-    params.winningsInfo = '';
+    showModal.push(playerScore, computerScore);
   });
 }
 
