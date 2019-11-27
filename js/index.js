@@ -92,7 +92,7 @@ for (var i = 0; i < test.length; i++) {
       modalOutput.innerHTML = 'You lost the whole game !!! <br> END OF THE GAME !!! PRESS THE BUTTON "NEW GAME" ';
       disableButtons();
     }
-    showModal.push(playerScore, computerScore);
+    showModal.progress.push(playerScore, computerScore);
   });
 }
 
